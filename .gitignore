@@ -25,4 +25,6 @@ DerivedData
 #
 Pods/
 
-CalendarTests/Images.xcassets
+CalendarTests/Images.xcassets/AppIcon.appiconset/60@3x.png
+CalendarTests/Images.xcassets/AppIcon.appiconset/60@2x.png
+
