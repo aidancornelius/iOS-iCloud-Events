@@ -1,25 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DjL-Rd-eQe">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calendar Test-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QVy-bh-zHh">
+                                <rect key="frame" x="0.0" y="72" width="320" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="eIo-eN-yYA"/>
+                                    <constraint firstAttribute="height" constant="162" id="uwC-9b-0D1"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="432388814.91825002">
+                                    <!--2014-09-14 12:00:14 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4L9-t8-V9i">
+                                <rect key="frame" x="0.0" y="242" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="44F-k6-9hO"/>
+                                    <constraint firstAttribute="height" constant="30" id="BHv-eb-wHb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDr-xt-AgE">
+                                <rect key="frame" x="0.0" y="280" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="hHi-di-D2n"/>
+                                    <constraint firstAttribute="height" constant="30" id="skx-3g-mMO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOv-Rm-pnP">
+                                <rect key="frame" x="0.0" y="318" width="320" height="37"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="oR7-xx-JHa"/>
+                                    <constraint firstAttribute="width" constant="320" id="sGk-aW-nYy"/>
+                                </constraints>
+                                <state key="normal" title="Create Event">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createEventButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZvQ-rH-l4S"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kOv-Rm-pnP" secondAttribute="trailing" constant="-16" id="O9Q-2I-WZT"/>
+                            <constraint firstItem="4L9-t8-V9i" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="PCW-dq-Tdg"/>
+                            <constraint firstItem="kOv-Rm-pnP" firstAttribute="top" secondItem="TDr-xt-AgE" secondAttribute="bottom" constant="8" id="UUV-zv-eKO"/>
+                            <constraint firstItem="kOv-Rm-pnP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="V5e-ih-lNa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4L9-t8-V9i" secondAttribute="trailing" constant="-16" id="eV4-tl-hqp"/>
+                            <constraint firstItem="4L9-t8-V9i" firstAttribute="top" secondItem="QVy-bh-zHh" secondAttribute="bottom" constant="8" id="fk6-kA-qm6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TDr-xt-AgE" secondAttribute="trailing" constant="-16" id="jCq-j4-w5n"/>
+                            <constraint firstItem="TDr-xt-AgE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="o98-EN-pGe"/>
+                            <constraint firstItem="QVy-bh-zHh" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="r7W-Dc-i86"/>
+                            <constraint firstItem="TDr-xt-AgE" firstAttribute="top" secondItem="4L9-t8-V9i" secondAttribute="bottom" constant="8" id="sXk-kr-Qm1"/>
+                            <constraint firstItem="QVy-bh-zHh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="wNF-HP-QVe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QVy-bh-zHh" secondAttribute="trailing" constant="-16" id="z2d-aE-4Qp"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Calendar Test" id="gwY-Eq-hgc"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="datePickerOutlet" destination="QVy-bh-zHh" id="Ru1-dN-WKF"/>
+                        <outlet property="eventLocationOutlet" destination="TDr-xt-AgE" id="dkD-B9-Jwj"/>
+                        <outlet property="eventNameOutlet" destination="4L9-t8-V9i" id="Jwv-aU-n2i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1508" y="357"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tqL-Zs-R5w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DjL-Rd-eQe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ffd-IA-hiw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ceg-b1-lmd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12e-yx-p44" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="357"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "calendarControl.h"
 
 @interface ViewController ()
 
@@ -14,14 +15,21 @@
 
 @implementation ViewController
 
+@synthesize datePickerOutlet, eventNameOutlet, eventLocationOutlet;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [calendarControl requestAccess:^(BOOL granted, NSError *error) {
+        NSLog(@"%@", [error localizedDescription]);
+    }];
+    [eventNameOutlet becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)createEventButton:(id)sender {
+    [calendarControl addEventAt:datePickerOutlet.date withTitle:eventNameOutlet.text inLocation:eventLocationOutlet.text];
+}
 @end

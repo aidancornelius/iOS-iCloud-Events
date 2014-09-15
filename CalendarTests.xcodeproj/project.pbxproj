@@ -14,6 +14,8 @@
 		124B7BD519C5B0AD00439D11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124B7BD419C5B0AD00439D11 /* Images.xcassets */; };
 		124B7BD819C5B0AD00439D11 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 124B7BD619C5B0AD00439D11 /* LaunchScreen.xib */; };
 		124B7BE419C5B0AD00439D11 /* CalendarTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 124B7BE319C5B0AD00439D11 /* CalendarTestsTests.m */; };
+		124B7BF119C5B11E00439D11 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124B7BF019C5B11E00439D11 /* EventKit.framework */; };
+		124B7BF419C5BA0600439D11 /* calendarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 124B7BF319C5BA0600439D11 /* calendarControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		124B7BDD19C5B0AD00439D11 /* CalendarTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendarTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		124B7BE219C5B0AD00439D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		124B7BE319C5B0AD00439D11 /* CalendarTestsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarTestsTests.m; sourceTree = "<group>"; };
+		124B7BF019C5B11E00439D11 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		124B7BF219C5BA0600439D11 /* calendarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarControl.h; sourceTree = "<group>"; };
+		124B7BF319C5BA0600439D11 /* calendarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				124B7BF119C5B11E00439D11 /* EventKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		124B7BBB19C5B0AD00439D11 = {
 			isa = PBXGroup;
 			children = (
+				124B7BF019C5B11E00439D11 /* EventKit.framework */,
 				124B7BC619C5B0AD00439D11 /* CalendarTests */,
 				124B7BE019C5B0AD00439D11 /* CalendarTestsTests */,
 				124B7BC519C5B0AD00439D11 /* Products */,
@@ -85,6 +92,8 @@
 				124B7BCC19C5B0AD00439D11 /* AppDelegate.m */,
 				124B7BCE19C5B0AD00439D11 /* ViewController.h */,
 				124B7BCF19C5B0AD00439D11 /* ViewController.m */,
+				124B7BF219C5BA0600439D11 /* calendarControl.h */,
+				124B7BF319C5BA0600439D11 /* calendarControl.m */,
 				124B7BD119C5B0AD00439D11 /* Main.storyboard */,
 				124B7BD419C5B0AD00439D11 /* Images.xcassets */,
 				124B7BD619C5B0AD00439D11 /* LaunchScreen.xib */,
@@ -222,6 +231,7 @@
 				124B7BD019C5B0AD00439D11 /* ViewController.m in Sources */,
 				124B7BCD19C5B0AD00439D11 /* AppDelegate.m in Sources */,
 				124B7BCA19C5B0AD00439D11 /* main.m in Sources */,
+				124B7BF419C5BA0600439D11 /* calendarControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
