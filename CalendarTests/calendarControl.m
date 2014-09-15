@@ -3,7 +3,6 @@
 //  TfEL Events
 //
 //  Created by Aidan Cornelius-Bell on 11/09/2014.
-//  Copyright (c) 2014 Department for Education and Child Development. All rights reserved.
 //
 
 #import "calendarControl.h"
@@ -35,7 +34,7 @@ static EKEventStore *eventStore = nil;
 {
     EKEvent *event = [EKEvent eventWithEventStore:eventStore];
     EKCalendar *calendar = nil;
-    NSString *calendarIdentifier = [[NSUserDefaults standardUserDefaults] valueForKey:@"TfEL Events"];
+    NSString *calendarIdentifier = [[NSUserDefaults standardUserDefaults] valueForKey:@"Events"];
     
     // when identifier exists, my calendar probably already exists
     // note that user can delete my calendar. In that case I have to create it again.
@@ -49,7 +48,7 @@ static EKEventStore *eventStore = nil;
         calendar = [EKCalendar calendarForEntityType:EKEntityTypeEvent eventStore:eventStore];
         
         // set calendar name. This is what users will see in their Calendar app
-        [calendar setTitle:@"TfEL Events"];
+        [calendar setTitle:@"Events"];
         
         // find appropriate source type. I'm interested only in local calendars but
         // there are also calendars in iCloud, MS Exchange, ...
@@ -80,7 +79,7 @@ static EKEventStore *eventStore = nil;
         if (saved) {
             // http://stackoverflow.com/questions/1731530/whats-the-easiest-way-to-persist-data-in-an-iphone-app
             // saved successfuly, store it's identifier in NSUserDefaults
-            [[NSUserDefaults standardUserDefaults] setObject:calendarIdentifier forKey:@"TfEL Events"];
+            [[NSUserDefaults standardUserDefaults] setObject:calendarIdentifier forKey:@"Events"];
             NSLog(@"Calendar Saved");
         } else {
             // unable to save calendar

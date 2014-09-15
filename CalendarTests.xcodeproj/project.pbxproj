@@ -13,7 +13,6 @@
 		124B7BD319C5B0AD00439D11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124B7BD119C5B0AD00439D11 /* Main.storyboard */; };
 		124B7BD519C5B0AD00439D11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124B7BD419C5B0AD00439D11 /* Images.xcassets */; };
 		124B7BD819C5B0AD00439D11 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 124B7BD619C5B0AD00439D11 /* LaunchScreen.xib */; };
-		124B7BE419C5B0AD00439D11 /* CalendarTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 124B7BE319C5B0AD00439D11 /* CalendarTestsTests.m */; };
 		124B7BF119C5B11E00439D11 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124B7BF019C5B11E00439D11 /* EventKit.framework */; };
 		124B7BF419C5BA0600439D11 /* calendarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 124B7BF319C5BA0600439D11 /* calendarControl.m */; };
 /* End PBXBuildFile section */
@@ -40,8 +39,6 @@
 		124B7BD419C5B0AD00439D11 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		124B7BD719C5B0AD00439D11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		124B7BDD19C5B0AD00439D11 /* CalendarTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendarTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		124B7BE219C5B0AD00439D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		124B7BE319C5B0AD00439D11 /* CalendarTestsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarTestsTests.m; sourceTree = "<group>"; };
 		124B7BF019C5B11E00439D11 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		124B7BF219C5BA0600439D11 /* calendarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calendarControl.h; sourceTree = "<group>"; };
 		124B7BF319C5BA0600439D11 /* calendarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calendarControl.m; sourceTree = "<group>"; };
@@ -71,7 +68,6 @@
 			children = (
 				124B7BF019C5B11E00439D11 /* EventKit.framework */,
 				124B7BC619C5B0AD00439D11 /* CalendarTests */,
-				124B7BE019C5B0AD00439D11 /* CalendarTestsTests */,
 				124B7BC519C5B0AD00439D11 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,23 +103,6 @@
 			children = (
 				124B7BC819C5B0AD00439D11 /* Info.plist */,
 				124B7BC919C5B0AD00439D11 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		124B7BE019C5B0AD00439D11 /* CalendarTestsTests */ = {
-			isa = PBXGroup;
-			children = (
-				124B7BE319C5B0AD00439D11 /* CalendarTestsTests.m */,
-				124B7BE119C5B0AD00439D11 /* Supporting Files */,
-			);
-			path = CalendarTestsTests;
-			sourceTree = "<group>";
-		};
-		124B7BE119C5B0AD00439D11 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				124B7BE219C5B0AD00439D11 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -239,7 +218,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				124B7BE419C5B0AD00439D11 /* CalendarTestsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +400,7 @@
 				124B7BE919C5B0AD00439D11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		124B7BEA19C5B0AD00439D11 /* Build configuration list for PBXNativeTarget "CalendarTestsTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +409,7 @@
 				124B7BEC19C5B0AD00439D11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
